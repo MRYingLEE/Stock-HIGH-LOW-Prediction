@@ -129,59 +129,9 @@ We use Keras + Tensorflow along with other Python ecosystem packages, such as nu
 !pip install tensorflow-gpu
 ```
 
-    Requirement already satisfied: tensorflow-gpu in /usr/local/lib/python3.6/dist-packages (2.1.0)
-    Requirement already satisfied: astor>=0.6.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (0.8.1)
-    Requirement already satisfied: termcolor>=1.1.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.1.0)
-    Requirement already satisfied: six>=1.12.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.12.0)
-    Requirement already satisfied: keras-preprocessing>=1.1.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.1.0)
-    Requirement already satisfied: gast==0.2.2 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (0.2.2)
-    Requirement already satisfied: numpy<2.0,>=1.16.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.17.5)
-    Requirement already satisfied: google-pasta>=0.1.6 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (0.1.8)
-    Requirement already satisfied: protobuf>=3.8.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (3.10.0)
-    Requirement already satisfied: wheel>=0.26; python_version >= "3" in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (0.33.6)
-    Requirement already satisfied: wrapt>=1.11.1 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.11.2)
-    Requirement already satisfied: scipy==1.4.1; python_version >= "3" in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.4.1)
-    Requirement already satisfied: keras-applications>=1.0.8 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.0.8)
-    Requirement already satisfied: tensorboard<2.2.0,>=2.1.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (2.1.0)
-    Requirement already satisfied: opt-einsum>=2.3.2 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (3.1.0)
-    Requirement already satisfied: absl-py>=0.7.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (0.9.0)
-    Requirement already satisfied: grpcio>=1.8.6 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (1.15.0)
-    Requirement already satisfied: tensorflow-estimator<2.2.0,>=2.1.0rc0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu) (2.1.0)
-    Requirement already satisfied: setuptools in /usr/local/lib/python3.6/dist-packages (from protobuf>=3.8.0->tensorflow-gpu) (42.0.2)
-    Requirement already satisfied: h5py in /usr/local/lib/python3.6/dist-packages (from keras-applications>=1.0.8->tensorflow-gpu) (2.8.0)
-    Requirement already satisfied: werkzeug>=0.11.15 in /usr/local/lib/python3.6/dist-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (0.16.0)
-    Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.6/dist-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (3.1.1)
-    Requirement already satisfied: requests<3,>=2.21.0 in /usr/local/lib/python3.6/dist-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (2.21.0)
-    Requirement already satisfied: google-auth<2,>=1.6.3 in /usr/local/lib/python3.6/dist-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (1.10.1)
-    Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in /usr/local/lib/python3.6/dist-packages (from tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (0.4.1)
-    Requirement already satisfied: urllib3<1.25,>=1.21.1 in /usr/local/lib/python3.6/dist-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (1.24.3)
-    Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /usr/local/lib/python3.6/dist-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (3.0.4)
-    Requirement already satisfied: idna<2.9,>=2.5 in /usr/local/lib/python3.6/dist-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (2.8)
-    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.6/dist-packages (from requests<3,>=2.21.0->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (2019.11.28)
-    Requirement already satisfied: rsa<4.1,>=3.1.4 in /usr/local/lib/python3.6/dist-packages (from google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (4.0)
-    Requirement already satisfied: pyasn1-modules>=0.2.1 in /usr/local/lib/python3.6/dist-packages (from google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (0.2.7)
-    Requirement already satisfied: cachetools<5.0,>=2.0.0 in /usr/local/lib/python3.6/dist-packages (from google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (4.0.0)
-    Requirement already satisfied: requests-oauthlib>=0.7.0 in /usr/local/lib/python3.6/dist-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (1.3.0)
-    Requirement already satisfied: pyasn1>=0.1.3 in /usr/local/lib/python3.6/dist-packages (from rsa<4.1,>=3.1.4->google-auth<2,>=1.6.3->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (0.4.8)
-    Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.6/dist-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.2.0,>=2.1.0->tensorflow-gpu) (3.1.0)
-
-
-
 ```
 !pip install mpl_finance
 ```
-
-    Requirement already satisfied: mpl_finance in /usr/local/lib/python3.6/dist-packages (0.10.0)
-    Requirement already satisfied: matplotlib in /usr/local/lib/python3.6/dist-packages (from mpl_finance) (3.1.2)
-    Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /usr/local/lib/python3.6/dist-packages (from matplotlib->mpl_finance) (2.4.6)
-    Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib/python3.6/dist-packages (from matplotlib->mpl_finance) (1.1.0)
-    Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.6/dist-packages (from matplotlib->mpl_finance) (0.10.0)
-    Requirement already satisfied: python-dateutil>=2.1 in /usr/local/lib/python3.6/dist-packages (from matplotlib->mpl_finance) (2.6.1)
-    Requirement already satisfied: numpy>=1.11 in /usr/local/lib/python3.6/dist-packages (from matplotlib->mpl_finance) (1.17.5)
-    Requirement already satisfied: setuptools in /usr/local/lib/python3.6/dist-packages (from kiwisolver>=1.0.1->matplotlib->mpl_finance) (42.0.2)
-    Requirement already satisfied: six in /usr/local/lib/python3.6/dist-packages (from cycler>=0.10->matplotlib->mpl_finance) (1.12.0)
-
-
 
 ```
 import os
@@ -406,19 +356,6 @@ df[["HIGH_tick","LOW_tick"]].groupby("HIGH_tick").count().head(40)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -606,19 +543,6 @@ df[["HIGH_tick","LOW_tick"]].groupby("LOW_tick").count().head(40)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -888,19 +812,6 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1056,19 +967,6 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1365,208 +1263,6 @@ history = model.fit(
 ```
 
     Train on 1033 samples, validate on 115 samples
-    Epoch 1/100
-    1033/1033 [==============================] - 3s 3ms/sample - loss: 0.0961 - val_loss: 0.0075
-    Epoch 2/100
-    1033/1033 [==============================] - 0s 207us/sample - loss: 0.0026 - val_loss: 4.7194e-04
-    Epoch 3/100
-    1033/1033 [==============================] - 0s 244us/sample - loss: 3.0440e-04 - val_loss: 1.7221e-04
-    Epoch 4/100
-    1033/1033 [==============================] - 0s 213us/sample - loss: 1.6948e-04 - val_loss: 1.1866e-04
-    Epoch 5/100
-    1033/1033 [==============================] - 0s 195us/sample - loss: 1.3693e-04 - val_loss: 9.9681e-05
-    Epoch 6/100
-    1033/1033 [==============================] - 0s 204us/sample - loss: 1.2298e-04 - val_loss: 8.9734e-05
-    Epoch 7/100
-    1033/1033 [==============================] - 0s 232us/sample - loss: 1.1647e-04 - val_loss: 8.3405e-05
-    Epoch 8/100
-    1033/1033 [==============================] - 0s 207us/sample - loss: 1.1164e-04 - val_loss: 7.9033e-05
-    Epoch 9/100
-    1033/1033 [==============================] - 0s 208us/sample - loss: 1.0853e-04 - val_loss: 7.5922e-05
-    Epoch 10/100
-    1033/1033 [==============================] - 0s 200us/sample - loss: 1.0615e-04 - val_loss: 7.3603e-05
-    Epoch 11/100
-    1033/1033 [==============================] - 0s 209us/sample - loss: 1.0452e-04 - val_loss: 7.1876e-05
-    Epoch 12/100
-    1033/1033 [==============================] - 0s 214us/sample - loss: 1.0337e-04 - val_loss: 7.0569e-05
-    Epoch 13/100
-    1033/1033 [==============================] - 0s 201us/sample - loss: 1.0279e-04 - val_loss: 6.9561e-05
-    Epoch 14/100
-    1033/1033 [==============================] - 0s 195us/sample - loss: 1.0178e-04 - val_loss: 6.8787e-05
-    Epoch 15/100
-    1033/1033 [==============================] - 0s 232us/sample - loss: 1.0155e-04 - val_loss: 6.8164e-05
-    Epoch 16/100
-    1033/1033 [==============================] - 0s 209us/sample - loss: 1.0162e-04 - val_loss: 6.7673e-05
-    Epoch 17/100
-    1033/1033 [==============================] - 0s 213us/sample - loss: 1.0108e-04 - val_loss: 6.7302e-05
-    Epoch 18/100
-    1033/1033 [==============================] - 0s 206us/sample - loss: 1.0108e-04 - val_loss: 6.6995e-05
-    Epoch 19/100
-    1033/1033 [==============================] - 0s 202us/sample - loss: 1.0079e-04 - val_loss: 6.6748e-05
-    Epoch 20/100
-    1033/1033 [==============================] - 0s 207us/sample - loss: 1.0082e-04 - val_loss: 6.6542e-05
-    Epoch 21/100
-    1033/1033 [==============================] - 0s 207us/sample - loss: 1.0052e-04 - val_loss: 6.6374e-05
-    Epoch 22/100
-    1033/1033 [==============================] - 0s 203us/sample - loss: 1.0039e-04 - val_loss: 6.6251e-05
-    Epoch 23/100
-    1033/1033 [==============================] - 0s 202us/sample - loss: 1.0069e-04 - val_loss: 6.6142e-05
-    Epoch 24/100
-    1033/1033 [==============================] - 0s 201us/sample - loss: 1.0019e-04 - val_loss: 6.6041e-05
-    Epoch 25/100
-    1033/1033 [==============================] - 0s 203us/sample - loss: 1.0061e-04 - val_loss: 6.5965e-05
-    Epoch 26/100
-    1033/1033 [==============================] - 0s 216us/sample - loss: 1.0044e-04 - val_loss: 6.5926e-05
-    Epoch 27/100
-    1033/1033 [==============================] - 0s 220us/sample - loss: 1.0040e-04 - val_loss: 6.5886e-05
-    Epoch 28/100
-    1033/1033 [==============================] - 0s 202us/sample - loss: 1.0050e-04 - val_loss: 6.5855e-05
-    Epoch 29/100
-    1033/1033 [==============================] - 0s 196us/sample - loss: 1.0057e-04 - val_loss: 6.5817e-05
-    Epoch 30/100
-    1033/1033 [==============================] - 0s 206us/sample - loss: 1.0065e-04 - val_loss: 6.5786e-05
-    Epoch 31/100
-    1033/1033 [==============================] - 0s 210us/sample - loss: 1.0036e-04 - val_loss: 6.5753e-05
-    Epoch 32/100
-    1033/1033 [==============================] - 0s 214us/sample - loss: 1.0031e-04 - val_loss: 6.5729e-05
-    Epoch 33/100
-    1033/1033 [==============================] - 0s 195us/sample - loss: 1.0033e-04 - val_loss: 6.5703e-05
-    Epoch 34/100
-    1033/1033 [==============================] - 0s 203us/sample - loss: 1.0028e-04 - val_loss: 6.5698e-05
-    Epoch 35/100
-    1033/1033 [==============================] - 0s 214us/sample - loss: 1.0046e-04 - val_loss: 6.5679e-05
-    Epoch 36/100
-    1033/1033 [==============================] - 0s 201us/sample - loss: 1.0024e-04 - val_loss: 6.5660e-05
-    Epoch 37/100
-    1033/1033 [==============================] - 0s 219us/sample - loss: 1.0041e-04 - val_loss: 6.5664e-05
-    Epoch 38/100
-    1033/1033 [==============================] - 0s 251us/sample - loss: 1.0028e-04 - val_loss: 6.5672e-05
-    Epoch 39/100
-    1033/1033 [==============================] - 0s 272us/sample - loss: 1.0076e-04 - val_loss: 6.5673e-05
-    Epoch 40/100
-    1033/1033 [==============================] - 0s 263us/sample - loss: 1.0044e-04 - val_loss: 6.5665e-05
-    Epoch 41/100
-    1033/1033 [==============================] - 0s 206us/sample - loss: 1.0038e-04 - val_loss: 6.5641e-05
-    Epoch 42/100
-    1033/1033 [==============================] - 0s 198us/sample - loss: 1.0013e-04 - val_loss: 6.5626e-05
-    Epoch 43/100
-    1033/1033 [==============================] - 0s 204us/sample - loss: 1.0086e-04 - val_loss: 6.5625e-05
-    Epoch 44/100
-    1033/1033 [==============================] - 0s 210us/sample - loss: 1.0020e-04 - val_loss: 6.5636e-05
-    Epoch 45/100
-    1033/1033 [==============================] - 0s 219us/sample - loss: 1.0055e-04 - val_loss: 6.5639e-05
-    Epoch 46/100
-    1033/1033 [==============================] - 0s 202us/sample - loss: 1.0035e-04 - val_loss: 6.5633e-05
-    Epoch 47/100
-    1033/1033 [==============================] - 0s 218us/sample - loss: 1.0024e-04 - val_loss: 6.5619e-05
-    Epoch 48/100
-    1033/1033 [==============================] - 0s 201us/sample - loss: 1.0057e-04 - val_loss: 6.5620e-05
-    Epoch 49/100
-    1033/1033 [==============================] - 0s 208us/sample - loss: 1.0051e-04 - val_loss: 6.5636e-05
-    Epoch 50/100
-    1033/1033 [==============================] - 0s 198us/sample - loss: 1.0027e-04 - val_loss: 6.5627e-05
-    Epoch 51/100
-    1033/1033 [==============================] - 0s 228us/sample - loss: 1.0042e-04 - val_loss: 6.5623e-05
-    Epoch 52/100
-    1033/1033 [==============================] - 0s 230us/sample - loss: 1.0031e-04 - val_loss: 6.5624e-05
-    Epoch 53/100
-    1033/1033 [==============================] - 0s 210us/sample - loss: 1.0083e-04 - val_loss: 6.5628e-05
-    Epoch 54/100
-    1033/1033 [==============================] - 0s 207us/sample - loss: 1.0062e-04 - val_loss: 6.5620e-05
-    Epoch 55/100
-    1033/1033 [==============================] - 0s 192us/sample - loss: 9.9961e-05 - val_loss: 6.5611e-05
-    Epoch 56/100
-    1033/1033 [==============================] - 0s 219us/sample - loss: 1.0025e-04 - val_loss: 6.5611e-05
-    Epoch 57/100
-    1033/1033 [==============================] - 0s 212us/sample - loss: 1.0031e-04 - val_loss: 6.5617e-05
-    Epoch 58/100
-    1033/1033 [==============================] - 0s 208us/sample - loss: 1.0006e-04 - val_loss: 6.5610e-05
-    Epoch 59/100
-    1033/1033 [==============================] - 0s 199us/sample - loss: 9.9959e-05 - val_loss: 6.5617e-05
-    Epoch 60/100
-    1033/1033 [==============================] - 0s 236us/sample - loss: 1.0061e-04 - val_loss: 6.5602e-05
-    Epoch 61/100
-    1033/1033 [==============================] - 0s 200us/sample - loss: 1.0094e-04 - val_loss: 6.5575e-05
-    Epoch 62/100
-    1033/1033 [==============================] - 0s 198us/sample - loss: 1.0054e-04 - val_loss: 6.5582e-05
-    Epoch 63/100
-    1033/1033 [==============================] - 0s 215us/sample - loss: 1.0034e-04 - val_loss: 6.5594e-05
-    Epoch 64/100
-    1033/1033 [==============================] - 0s 196us/sample - loss: 1.0010e-04 - val_loss: 6.5617e-05
-    Epoch 65/100
-    1033/1033 [==============================] - 0s 215us/sample - loss: 1.0074e-04 - val_loss: 6.5623e-05
-    Epoch 66/100
-    1033/1033 [==============================] - 0s 207us/sample - loss: 1.0019e-04 - val_loss: 6.5614e-05
-    Epoch 67/100
-    1033/1033 [==============================] - 0s 203us/sample - loss: 1.0051e-04 - val_loss: 6.5615e-05
-    Epoch 68/100
-    1033/1033 [==============================] - 0s 210us/sample - loss: 1.0033e-04 - val_loss: 6.5619e-05
-    Epoch 69/100
-    1033/1033 [==============================] - 0s 200us/sample - loss: 9.9957e-05 - val_loss: 6.5611e-05
-    Epoch 70/100
-    1033/1033 [==============================] - 0s 199us/sample - loss: 1.0029e-04 - val_loss: 6.5619e-05
-    Epoch 71/100
-    1033/1033 [==============================] - 0s 205us/sample - loss: 1.0055e-04 - val_loss: 6.5605e-05
-    Epoch 72/100
-    1033/1033 [==============================] - 0s 245us/sample - loss: 1.0030e-04 - val_loss: 6.5615e-05
-    Epoch 73/100
-    1033/1033 [==============================] - 0s 268us/sample - loss: 1.0030e-04 - val_loss: 6.5584e-05
-    Epoch 74/100
-    1033/1033 [==============================] - 0s 261us/sample - loss: 1.0030e-04 - val_loss: 6.5587e-05
-    Epoch 75/100
-    1033/1033 [==============================] - 0s 233us/sample - loss: 1.0057e-04 - val_loss: 6.5606e-05
-    Epoch 76/100
-    1033/1033 [==============================] - 0s 205us/sample - loss: 1.0042e-04 - val_loss: 6.5615e-05
-    Epoch 77/100
-    1033/1033 [==============================] - 0s 197us/sample - loss: 1.0070e-04 - val_loss: 6.5608e-05
-    Epoch 78/100
-    1033/1033 [==============================] - 0s 200us/sample - loss: 1.0035e-04 - val_loss: 6.5590e-05
-    Epoch 79/100
-    1033/1033 [==============================] - 0s 208us/sample - loss: 1.0048e-04 - val_loss: 6.5571e-05
-    Epoch 80/100
-    1033/1033 [==============================] - 0s 217us/sample - loss: 1.0038e-04 - val_loss: 6.5579e-05
-    Epoch 81/100
-    1033/1033 [==============================] - 0s 204us/sample - loss: 1.0042e-04 - val_loss: 6.5575e-05
-    Epoch 82/100
-    1033/1033 [==============================] - 0s 198us/sample - loss: 1.0046e-04 - val_loss: 6.5576e-05
-    Epoch 83/100
-    1033/1033 [==============================] - 0s 197us/sample - loss: 1.0043e-04 - val_loss: 6.5589e-05
-    Epoch 84/100
-    1033/1033 [==============================] - 0s 204us/sample - loss: 1.0046e-04 - val_loss: 6.5606e-05
-    Epoch 85/100
-    1033/1033 [==============================] - 0s 203us/sample - loss: 1.0077e-04 - val_loss: 6.5593e-05
-    Epoch 86/100
-    1033/1033 [==============================] - 0s 206us/sample - loss: 1.0013e-04 - val_loss: 6.5593e-05
-    Epoch 87/100
-    1033/1033 [==============================] - 0s 195us/sample - loss: 1.0090e-04 - val_loss: 6.5612e-05
-    Epoch 88/100
-    1033/1033 [==============================] - 0s 199us/sample - loss: 1.0062e-04 - val_loss: 6.5616e-05
-    Epoch 89/100
-    1033/1033 [==============================] - 0s 205us/sample - loss: 1.0020e-04 - val_loss: 6.5622e-05
-    Epoch 90/100
-    1033/1033 [==============================] - 0s 203us/sample - loss: 1.0005e-04 - val_loss: 6.5604e-05
-    Epoch 91/100
-    1033/1033 [==============================] - 0s 204us/sample - loss: 1.0025e-04 - val_loss: 6.5594e-05
-    Epoch 92/100
-    1033/1033 [==============================] - 0s 216us/sample - loss: 1.0036e-04 - val_loss: 6.5606e-05
-    Epoch 93/100
-    1033/1033 [==============================] - 0s 199us/sample - loss: 9.9865e-05 - val_loss: 6.5617e-05
-    Epoch 94/100
-    1033/1033 [==============================] - 0s 209us/sample - loss: 1.0043e-04 - val_loss: 6.5621e-05
-    Epoch 95/100
-    1033/1033 [==============================] - 0s 206us/sample - loss: 1.0086e-04 - val_loss: 6.5626e-05
-    Epoch 96/100
-    1033/1033 [==============================] - 0s 203us/sample - loss: 1.0056e-04 - val_loss: 6.5624e-05
-    Epoch 97/100
-    1033/1033 [==============================] - 0s 206us/sample - loss: 1.0028e-04 - val_loss: 6.5647e-05
-    Epoch 98/100
-    1033/1033 [==============================] - 0s 200us/sample - loss: 1.0040e-04 - val_loss: 6.5624e-05
-    Epoch 99/100
-    1033/1033 [==============================] - 0s 221us/sample - loss: 1.0010e-04 - val_loss: 6.5639e-05
-    Epoch 100/100
-    1033/1033 [==============================] - 0s 213us/sample - loss: 1.0039e-04 - val_loss: 6.5660e-05
-
-
 ## Training Log
 
 
@@ -1639,19 +1335,6 @@ df_test
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1926,19 +1609,6 @@ df_hat
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2021,19 +1691,6 @@ df_compare
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2347,19 +2004,6 @@ df_compare[['DATE', 'OPEN', 'CLOSE', 'HIGH', 'HIGH_hat','HIGH_diff_tick', 'LOW',
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
