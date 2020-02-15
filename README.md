@@ -227,35 +227,6 @@ df_candle=df_candle[['DATE','OPEN', 'HIGH', 'LOW', 'CLOSE']]
 df_candle.head
 ```
 
-    /usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:6: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      
-
-
-
-
-
-    <bound method NDFrame.head of           DATE   OPEN   HIGH    LOW  CLOSE
-    0     735619.0  126.2  128.9  125.2  128.7
-    1     735620.0  130.5  132.0  129.7  131.6
-    2     735621.0  134.6  134.9  131.1  132.7
-    3     735624.0  136.7  137.1  134.3  137.0
-    4     735625.0  138.0  138.0  133.0  136.0
-    ...        ...    ...    ...    ...    ...
-    1226  737438.0  410.0  413.0  396.6  400.4
-    1227  737439.0  397.2  403.0  396.2  398.8
-    1228  737440.0  399.0  403.0  396.4  400.0
-    1229  737441.0  400.0  400.6  396.0  399.0
-    1230  737444.0  405.0  405.0  396.0  396.0
-    
-    [1231 rows x 5 columns]>
-
-
-
-
 ```
 
 # Define a new subplot
@@ -1299,12 +1270,6 @@ plt.show()
 ```
 model.evaluate(X_test, y_test)
 ```
-
-    61/61 [==============================] - 0s 293us/sample - loss: 4.5586e-05
-
-
-
-
 
     4.558617681633208e-05
 
