@@ -1,4 +1,4 @@
-# Stock-HIGH-LOW-Prediction.
+# Stock-HIGH-LOW-Prediction
 To predict stock’s day HIGH and LOW prices based on its OPEN and historical daily price by LSTM model.
 
 # Problem
@@ -2192,19 +2192,6 @@ df_compare
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2579,13 +2566,6 @@ df_compare
 ## The Results Are Not Good Although the Training Seems Good
 
 # How to improve
-
-
-
-
-
-
-
 ## Data
 
 To improve the effectiveness of prediction, we need to add more data:
